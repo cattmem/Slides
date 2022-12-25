@@ -19,6 +19,7 @@ a, a:visited {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+    
 }
 img {
     user-drag: none;
@@ -421,7 +422,7 @@ body {
 .pricing .price-block {
 
     height: 454px;
-    width: auto;
+
     
     text-align: left;
     background: #FFFFFF;
@@ -520,6 +521,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 
 
 @media (hover: hover) and (pointer: fine) {
