@@ -19,6 +19,7 @@ a, a:visited {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+    outline: none;
     
 }
 img {
@@ -28,7 +29,7 @@ img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    pointer-events: none;
+    outline: none;
 }
 
 li {
