@@ -5,10 +5,30 @@
 p {
     margin: 0;
 }
+
 a, a:visited {
     text-decoration: none;
+    cursor: pointer;
     color: inherit;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 li {
   list-style-type: none;
 }
@@ -30,11 +50,20 @@ body {
 .header {
     width: 100%;
     height: 70px;
-    background: rgba(255, 255, 255, 0.976);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.07);
-    
+    backdrop-filter: blur(10px);
     box-sizing: border-box;
     padding-top: 14px;
+}
+.hide-header {
+    z-index: 10;
+    top:-75px;
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    transition: .2s;
+
 }
 .container {
     margin-left: 130px;
@@ -62,7 +91,7 @@ body {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     
-    color: #fff;
+    color: #fff !important;
 }
 
 .base {
@@ -106,9 +135,13 @@ body {
 .company {
     margin-top: 217px;
     width: 100%;
-    display: flex;
 
+    display: flex;
     justify-content: space-between;
+
+}
+.company img {
+    transition: .5s;
 }
 
 
@@ -197,10 +230,22 @@ body {
 }
 .uses-panel p {
     padding-top: 5px;
-    transition: 0.5s;
+    transition: 0.3s;
+    position: relative;
 }
 
-
+.uses-panel p::before {
+    content: url('../img/plus.png');;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left:-30px;
+    top: -1px;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.3s;
+    
+}
 
 .examples3 {
     margin-top: 128px;
@@ -282,4 +327,213 @@ body {
     height: auto;
     margin-top: 120px;
     margin-bottom: -4px;
+}
+
+
+
+.reviews {
+    margin-top: 156px;
+}
+.reviews .left-arrow {
+    margin-top: -230px;
+    width: 33.23px;
+}
+.riviews .review {
+    width: 908px;
+
+}
+.reviews .right-arrow {
+    margin-top: -230px;
+    width: 33.23px;
+}
+.reviews .separation {
+    background: #CCCCCC;
+    height: 1px;
+    margin-top: 98px;
+}
+
+
+
+.checkbox-div {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    border-radius: 50px;
+    background: #30B467;
+
+}
+.checkbox-input {
+    display: none
+}
+.checkbox-input:checked ~ .checkbox-div::before {
+    left: 19px;
+}
+.checkbox-div::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50px;
+    transition: .2s;
+}
+
+.pricing {
+    color: #202020;
+    text-align: center;
+    margin-top: 159px;
+    margin-bottom: 100px;
+}
+.pricing .h-text {
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 79px;
+    letter-spacing: 1.386px;
+    color: #202020;
+}
+.pricing .price-selection {
+    width: 177px;
+    display: flex;
+
+    
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #202020;
+}
+.pricing .price-selection > *:not(:last-child) {
+    margin-right: 10px;
+}
+
+.pricing .pricing-blocks {
+    margin-top: 64px;
+    display: flex;
+
+    justify-content: space-between;
+
+}
+.pricing .price-block {
+
+    height: 454px;
+    width: auto;
+    
+    text-align: left;
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 29px 39px 41px 39px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: 0.285px;
+    color: #202020;
+}
+.pricing .price-block:not(:last-child) {
+    margin-right: 20px;
+}
+
+.pricing .price-block > .checks {
+    margin-top: 27px;
+    margin-left: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #202020;
+}
+.pricing .price-block > .checks > *:not(:last-child) {
+    margin-bottom: 14px;
+}
+.pricing .price-block > .price {
+    margin-top: 43px;
+    
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.pricing .price-block > .under-price {
+
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 29px;
+    color: #202020;
+}
+
+.pricing .price-block > .buy-button {
+    cursor: pointer;
+    width: 100%;
+    min-height: 42px;
+    box-sizing: border-box;
+    
+    padding: 9px 74px 10px 75px;
+    border-radius: 6px;
+    
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+
+
+.basement {
+    padding-top: 80px;
+}
+.basement-nav ul {
+    display: flex;
+    
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #202020;
+}
+.basement-nav li:not(:last-child) {
+    margin-right: 24px;
+}
+
+.basement .separation {
+    margin-top: 79px;
+    height: 1px;
+    background: #DADADA8C;
+}
+
+.unbasement {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .uses-panel p:hover::before {
+        opacity: 1;
+        padding-left: 10px;
+        left: -40px;
+    }
+    .uses-panel p:hover {
+        margin-left: 8px;
+    }
+    .company img:hover {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }

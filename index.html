@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
         
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        
     </head>
     <body>
         <header class="header">
@@ -17,7 +18,7 @@
                     </div>
                     <nav class="header-nav">
                         <ul>
-                            <li><a href="#">Pricing</a></li>
+                            <li><a class="goToPrice">Pricing</a></li>
                             <li><a href="#">Help</a></li>
                             <li><a href="#">Login</a></li>
                             <li><a class="demo-test" href="#">Demo</a></li>
@@ -25,6 +26,8 @@
                     </nav>
                 </div>
             </div>
+        </header>
+        <header class="hide-header">
         </header>
         
         <div class="base">
@@ -38,7 +41,7 @@
                             Generate beautiful, animated, static websites<br>with your creative direction in a matter of<br>minutes. Yes, minutes.
                         </p>
                         <div class='b-base'>
-                            <a class="b-open-app">Open the App</a>
+                            <a class="b-open-app" href="#">Open the App</a>
                             <a class="b-pricing">Pricing</a>
                         </div>
                     </div>
@@ -146,5 +149,94 @@
                 <img class="view-image" src="img/Frame4.png">
             </div>
         </div>
+        
+        <div class="reviews">
+            <div class="container">
+                <div class="header-row">
+                    <div class="left-arrow"><img src="img/left-arrow.svg"></div>
+                    <div class="review"><img src="img/reviews/reivew1.png"></div>
+                    <div class="right-arrow"><img src="img/right-arrow.svg"></div>
+                </div>
+                <div class="separation"></div>
+            </div>
+        </div>
+        
+        <div class="pricing" id="pricing">
+            <div style="margin-left: 230px;margin-right: 230px;">
+                <p class="h-text">Pricing</p>
+                <div class="price-selection">
+                    <p>Annual</p>
+                    <label class="checkbox">
+                        <input type="checkbox" class="checkbox-input">
+                        <div class="checkbox-div"></div>
+                    </label>
+                    <p>Monthly</p>
+                </div>
+                <div class="pricing-blocks">
+                    <div class="price-block">
+                        <p>Free</p>
+                        <div class="checks">
+                            <p><img style="margin-right: 7px;" src="img/check-unactive.svg">Limited Slides</p>
+                            <p><img style="margin-right: 7px;" src="img/check-unactive.svg">Limited Settings</p>
+                            <p><img style="margin-right: 7px;" src="img/check-unactive.svg">Limited Effects</p>
+                            <p><img style="margin-right: 7px;" src="img/check-unactive.svg">No Support</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">No Credit Card needed</p>
+                        </div>
+                        <p class="price"><span style="font-size: 18px;line-height: 27px; vertical-align: text-top; margin-right: 4px;">$</span>0</p>
+                        <p class="under-price">No credit card needed.</p>
+                        <a class="buy-button" style="background: #2164E1">Try for Free</a>
+                    </div>
+                    <div class="price-block">
+                        <p>Business</p>
+                        <div class="checks">
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">20 Exports per Month</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Unlimited Project</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Unlimited Pages</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Project Management</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Support and Updates</p>
+                        </div>
+                        <p class="price"><span style="font-size: 18px;line-height: 27px; vertical-align: text-top; margin-right: 4px;">$</span>21</p>
+                        <p class="under-price">$249 billed annually. Save $99.</p>
+                        <a class="buy-button" style="background: #30B467">Add to Cart</a>
+                    </div>
+                    <div class="price-block">
+                        <p>Agency</p>
+                        <div class="checks">
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Unlimited Exports</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Unlimited Projects</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Unlimited Pages</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Project Management</p>
+                            <p><img style="margin-right: 7px;" src="img/check-active.svg">Support and Updates</p>
+                        </div>
+                        <p class="price"><span style="font-size: 18px;line-height: 27px; vertical-align: text-top; margin-right: 4px;">$</span>29</p>
+                        <p class="under-price">$349 billed annually. Save $119.</p>
+                        <a class="buy-button" style="background: #30B467">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="basement">
+            <div class="container">
+                <div class="header-row">
+                    <div class="site-company">
+                        <a><img src="img/creators/logo.svg"></a>
+                    </div>
+                    <nav class="basement-nav">
+                        <ul>
+                            <li><a href="#">Changelog</a></li>
+                            <li><a href="#">License</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="separation"></div>
+                <p class="unbasement">Free stuff: Upload static pages on WordPress with <a style="color: #174DD8">Static Pages for WordPress</a> plugin :)</p>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
