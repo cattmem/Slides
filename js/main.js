@@ -21,3 +21,13 @@ $(window).on('scroll', function(){
     $(".hide-header").css({"top":"-75px", "opacity":"0"});
   }
 });
+
+console.log($('link').attr("rel") == "icon")
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+if (darkThemeMq.matches) {
+    $('link[rel~="icon"]').attr('href', 'img/FaviconLight.png');
+    $('link[rel~="apple-touch-icon"]').attr('href', 'img/FaviconLight.png');
+} else {
+    $('link[rel~="icon"]').attr('href', 'img/FaviconDark.png');
+    $('link[rel~="apple-touch-icon"]').attr('href', 'img/FaviconDark.png');
+}
