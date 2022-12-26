@@ -9,7 +9,7 @@ $('.goToPrice').click(function() {
 
 
 var isScroll = 0, // доп. проверка
-    targetScroll = 130; // расстояние до действия / в px
+    targetScroll = 70; // расстояние до действия / в px
     
 $(window).on('scroll', function(){
   if(isScroll === 0 && $(this).scrollTop() >= targetScroll) {

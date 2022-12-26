@@ -1,3 +1,6 @@
+:root {
+    --padding-hover-company: 20px;
+}
 * {
     padding: 0;
     margin: 0;
@@ -108,6 +111,10 @@ body {
     line-height: 56px;
     letter-spacing: 0.99px;
     width: 370px;
+    
+}
+.base .info-text {
+    --animate-duration: 1.2s;
 }
 .info-text {
     margin-top: 22px;
@@ -117,10 +124,14 @@ body {
     letter-spacing: 0.231px;
 
 }
+.base .view-image {
+    --animate-duration: 1.3s;
+}
 .b-base {
     display: flex;
     margin-top: 15px;
     color: #fff;
+    --animate-duration: 1.4s;
 }
 .b-base > * {
     margin-right: 10px;
@@ -143,6 +154,7 @@ body {
 }
 .company img {
     transition: .5s;
+    position: relative;
 }
 
 
@@ -529,13 +541,24 @@ body {
         opacity: 1;
         padding-left: 10px;
         left: -40px;
+        
     }
     .uses-panel p:hover {
         margin-left: 8px;
     }
-    .company img:hover {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    .company > *:hover:not(:first-child, :last-child) {
+        --padding-hover-company: 20px;
+        padding-left: var(--padding-hover-company);
+        padding-right: var(--padding-hover-company);
 
+    }
+    .company > *:hover:first-child {
+        padding-right: var(--padding-hover-company);
+    }
+    .company > *:hover:last-child {
+        padding-left: var(--padding-hover-company)
+    }
+    .company > *:hover ~ .company > *:not(:hover) {
+        opacity: 0 !important;
+    }
 }
