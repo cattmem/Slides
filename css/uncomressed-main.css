@@ -241,7 +241,7 @@ body {
     position: relative;
 }
 .uses-panel p::before {
-    content: url('../img/plus.png');;
+    content: '+';
     position: absolute;
     width: 40px;
     height: 40px;
@@ -541,7 +541,8 @@ body {
 @media (hover: hover) and (pointer: fine) {
     .uses-panel p:hover::before {
         opacity: 1;
-        padding-left: 10px;
+        padding-left: 25px;
+        padding-top:6px;
         left: -40px;
         
     }
