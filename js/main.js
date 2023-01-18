@@ -21,7 +21,9 @@ if (darkThemeMq.matches) {
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $('link[rel~="icon"]').attr('href', 'img/FaviconLight.png');
     $('link[rel~="apple-touch-icon"]').attr('href', 'img/FaviconLight.png');
+    conole.log('черная тема')
 } else {
     $('link[rel~="icon"]').attr('href', 'img/FaviconDark.png');
     $('link[rel~="apple-touch-icon"]').attr('href', 'img/FaviconDark.png');
+    conole.log('белая тема')
 }
