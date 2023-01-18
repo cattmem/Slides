@@ -14,6 +14,11 @@ $(window).on('scroll', function(){
 
 const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 if (darkThemeMq.matches) {
+  // Theme set to dark.
+} else {
+  // Theme set to light.
+}
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $('link[rel~="icon"]').attr('href', 'img/FaviconLight.png');
     $('link[rel~="apple-touch-icon"]').attr('href', 'img/FaviconLight.png');
 } else {
