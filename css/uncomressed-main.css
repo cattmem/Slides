@@ -200,6 +200,11 @@ body {
 .blocks-row {
     display: flex;
 }
+.block:hover {
+    color:#fff;
+    background: #2164E1;
+    transform: scale(1.05);
+}
 .block {
     box-sizing: border-box;
     padding-top: 22px;
@@ -207,6 +212,7 @@ body {
     font-size: 27px;
     line-height: 25px;
     color: #202020;
+    transition:.2s;
     
     width: 120px;
     height: 100px;
