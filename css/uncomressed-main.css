@@ -77,7 +77,7 @@ body {
 .header {
     width: 100%;
     height: 70px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.07);
     backdrop-filter: blur(10px);
     box-sizing: border-box;
@@ -593,12 +593,12 @@ body {
         opacity: 0 !important;
     }
 }
-@supports :not(backdrop-filter: blur(10px)) {
+@supports backdrop-filter: blur(10px) {
     .error-browser {
         display: block !important;
     }
     
     .header {
-        background: rgba(255, 255, 255, 1) !important;
+            background: rgba(255, 255, 255, 0.8) !important;
 }
 }
