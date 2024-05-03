@@ -1,3 +1,3 @@
 # Slides
 
-https://cat-mem.github.io/Slides/
+https://cattmem.github.io/Slides/
